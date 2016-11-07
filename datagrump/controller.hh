@@ -2,15 +2,25 @@
 #define CONTROLLER_HH
 
 #include <cstdint>
-
+/*int A = 1;
+int M = 2;
+bool ack_arrival_flag = 0;
+bool timeout_flag = 0;
+unsigned int the_window_size = 50;*/
 /* Congestion controller interface */
 
 class Controller
 {
 private:
   bool debug_; /* Enables debugging output */
-
-  /* Add member variables here */
+	unsigned int A;
+	double M;
+	bool ack_arrival_flag;
+	bool timeout_flag;
+	unsigned int the_window_size;
+	unsigned int delta;	
+	unsigned int exp_next_seq;  
+/* Add member variables here */
 
 public:
   /* Public interface for the congestion controller */
